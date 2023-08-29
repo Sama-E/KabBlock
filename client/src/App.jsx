@@ -11,8 +11,8 @@ import Register from './pages/auths/register/Register';
 import Login from './pages/auths/login/Login';
 import Write from "./pages/posts/write/Write";
 import Single from './pages/posts/single/Single';
-import Navbar from './components/Navbar/Navbar';
-import Footer from './components/Footer/Footer';
+import Navbar from './components/nav/Navbar/Navbar';
+import Footer from './components/nav/Footer/Footer';
 
 
 const Layout = () => {

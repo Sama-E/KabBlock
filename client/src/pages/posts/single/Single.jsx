@@ -1,7 +1,7 @@
 import './single.scss';
 import Delete from '/src/assets/images/delete.png';
 import Edit from '/src/assets/images/edit.png';
-import Menu from '../../../components/menu/Menu';
+import Menu from '../../../components/nav/menu/Menu';
 import { Link, useLocation } from "react-router-dom";
 
 const Single = () => {
