@@ -17,44 +17,44 @@ const Single = () => {
 
   return (
     <div className="single">
-    <div className="content">
-      {/* <img src={`../upload/${post?.img}`} alt="" /> */}
-      <img src={post.img} alt="" />
-      <div className="user">
-        {/* {post.userImg && <img
-          src={post.userImg}
-          alt=""
-        />} */}
-        <img
-          src={post.userImg}
-          alt=""
-        />
-        <div className="info">
-          <span>{post.username}</span>
-          {/* <p>Posted {moment(post.date).fromNow()}</p> */}
-          <p>Posted {post.date}</p>
-        </div>
-        {/* {currentUser.username === post.username && ( */}
-          <div className="edit">
-            {/* <Link to={`/write?edit=2`} state={post}> */}
-            <Link to={`/write?edit=2`}>
-              <img src={Edit} alt="" />
-            </Link>
-            {/* <img onClick={handleDelete} src={Delete} alt="" /> */}
-            <img src={Delete} alt="" />
+      <div className="content">
+        {/* <img src={`../upload/${post?.img}`} alt="" /> */}
+        <img src={post.img} alt="" />
+        <div className="user">
+          {/* {post.userImg && <img
+            src={post.userImg}
+            alt=""
+          />} */}
+          <img
+            src={post.userImg}
+            alt=""
+          />
+          <div className="info">
+            <span>{post.username}</span>
+            {/* <p>Posted {moment(post.date).fromNow()}</p> */}
+            <p>Posted {post.date}</p>
           </div>
-        {/* )} */}
+          {/* {currentUser.username === post.username && ( */}
+            <div className="edit">
+              {/* <Link to={`/write?edit=2`} state={post}> */}
+              <Link to={`/write?edit=2`}>
+                <img src={Edit} alt="" />
+              </Link>
+              {/* <img onClick={handleDelete} src={Delete} alt="" /> */}
+              <img src={Delete} alt="" />
+            </div>
+          {/* )} */}
+        </div>
+        <h1>{post.title}</h1>
+        {/* <p
+          dangerouslySetInnerHTML={{
+            __html: DOMPurify.sanitize(post.desc),
+          }}
+        > */}
+        <p>
+          {post.desc}
+        </p>      
       </div>
-      <h1>{post.title}</h1>
-      {/* <p
-        dangerouslySetInnerHTML={{
-          __html: DOMPurify.sanitize(post.desc),
-        }}
-      > */}
-      <p>
-        {post.desc}
-      </p>      
-    </div>
     <Menu cat={post.cat}/>
   </div>
   )
