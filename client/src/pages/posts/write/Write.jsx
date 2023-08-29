@@ -15,15 +15,26 @@ const Write = () => {
           // onChange={(e) => setTitle(e.target.value)}
         />
 
-
         <Chat />
-        <div className="editorContainer">
-          {/* <ReactQuill
-            className="editor"
-            theme="snow"
-            value={value}
-            onChange={setValue}
-          /> */}
+
+        <div className="edit">
+          <div className="editItem">
+            <h4>Post</h4>
+            <div className="buttonEdit">
+              Add Heading
+            </div>
+            <div className="buttonEdit">
+              Add Box Image
+            </div>
+          </div>
+          <div className="editorContainer">
+            {/* <ReactQuill
+              className="editor"
+              theme="snow"
+              value={value}
+              onChange={setValue}
+            /> */}
+          </div>
         </div>
       </div>
       <div className="menu">

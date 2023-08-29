@@ -16,24 +16,24 @@
       border: 1px solid lightgray;
     }
 
-    .chatContainer {
-      height: 150px;
-      overflow: scroll;
-      border: 1px solid lightgray;
-
-      .editor {
-        height: 100%;
-        border: none;
-      }
-    }
-
     .chat{
-      padding: 0 10px;
+      padding: 10px 10px 10px 20px;
       display: flex;
       flex-direction: column;
       color:#555;
       border: 1px solid lightgray;
-    
+      
+      .chatContainer {
+        height: 150px;
+        overflow: scroll;
+        border: 1px solid lightgray;
+  
+        .editor {
+          height: 100%;
+          border: none;
+        }
+      }
+
       .itemChat{
         display: flex;
         flex-direction: row;
@@ -48,8 +48,8 @@
         .buttonChat{
           display: flex;
           justify-content: space-between;
-          background-color: $lightGreen;
-          padding: 10px 20px;
+          background-color: rgb(95, 224, 155);
+          padding: 10px 10px;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -61,21 +61,58 @@
           &:hover {
             color: black;
             background-color: white;
-            border: 1px solid $lightGreen;
+            border: 1px solid rgb(95, 224, 155);
           }
         }
       }
     }
 
-
-    .editorContainer {
-      height: 300px;
-      overflow: scroll;
+    .edit{ 
+      padding: 10px 10px 25px 20px;
+      display: flex;
+      flex-direction: column;
+      color:#555;
       border: 1px solid lightgray;
+      
+      .editItem{
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        padding: 10px 0;
+        gap: 20px;
+        align-items: center;
 
-      .editor {
-        height: 100%;
-        border: none;
+        .buttonEdit{
+          display: flex;
+          justify-content: space-between;
+          background-color: rgb(255, 217, 128);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-weight: 500;
+          font-size: 14px;
+          border: 1px solid white;
+          color: black;
+          padding: 12px;
+          height: 10px;
+  
+          &:hover {
+            color: black;
+            background-color: white;
+            border: 1px solid rgb(255, 217, 128);
+          }
+        }
+      }
+
+      .editorContainer {
+        height: 300px;
+        overflow: scroll;
+        border: 1px solid lightgray;
+  
+        .editor {
+          height: 100%;
+          border: none;
+        }
       }
     }
   }
