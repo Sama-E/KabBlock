@@ -4,7 +4,7 @@ const Upload = () => {
   return (
     <div className="item">
       <h3>
-        <b>Upload Image:</b>
+        <b>Jumbo Upload Image:</b>
       </h3>
       <input
         style={{ display: "none" }}

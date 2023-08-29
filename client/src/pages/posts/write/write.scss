@@ -16,6 +16,58 @@
       border: 1px solid lightgray;
     }
 
+    .chatContainer {
+      height: 150px;
+      overflow: scroll;
+      border: 1px solid lightgray;
+
+      .editor {
+        height: 100%;
+        border: none;
+      }
+    }
+
+    .chat{
+      padding: 0 10px;
+      display: flex;
+      flex-direction: column;
+      color:#555;
+      border: 1px solid lightgray;
+    
+      .itemChat{
+        display: flex;
+        flex-direction: row;
+        padding: 15px 0;
+  
+        input{
+          width: 600px;
+          border: 1px solid lightgray;
+          margin-right: 10px;
+        }
+    
+        .buttonChat{
+          display: flex;
+          justify-content: space-between;
+          background-color: $lightGreen;
+          padding: 10px 20px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-weight: 500;
+          font-size: 14px;
+          border: 1px solid white;
+          color: black;
+  
+          &:hover {
+            color: black;
+            background-color: white;
+            border: 1px solid $lightGreen;
+          }
+        }
+      }
+    }
+
+
     .editorContainer {
       height: 300px;
       overflow: scroll;
@@ -84,6 +136,14 @@
         display: flex;
         align-items: center;
         gap: 2px;
+      }
+
+      .tags{
+        input {
+          width: 90%;
+          padding: 8px;
+          border: 1px solid lightgray;
+        }
       }
     }
   }

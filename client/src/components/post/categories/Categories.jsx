@@ -1,4 +1,4 @@
-import './categories.scss';
+
 
 const Categories = () => {
   return (
