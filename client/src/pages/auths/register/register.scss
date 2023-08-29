@@ -6,11 +6,12 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: $lightGreen;
+  background-color: white;
+  
 
   h1 {
-    font-size: 20px;
-    color: teal;
+    font-size: 24px;
+    color: rgb(113, 179, 179);
     margin-bottom: 20px;
   }
 
@@ -21,6 +22,7 @@
     background-color: white;
     width: 200px;
     gap: 20px;
+    border: 1px lightgray solid;
 
     input {
       padding: 10px;
@@ -29,11 +31,23 @@
     }
 
     button {
+      display: flex;
+      justify-content: space-between;
+      background-color: rgb(113, 179, 179);
       padding: 10px;
-      border: none;
-      background-color: teal;
-      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 500;
+      font-size: 16px;
+      border: 1px solid white;
       color: white;
+
+      &:hover {
+        color: black;
+        background-color: white;
+        border: 1px solid rgb(113, 179, 179);
+      }
     }
 
     p {

@@ -5,6 +5,10 @@ import Upload from '../../../components/post/upload/Upload';
 import Visibility from '../../../components/post/visibility/Visibility';
 import './write.scss';
 
+import React, { useState } from "react";
+import ReactQuill from "react-quill";
+import "react-quill/dist/quill.snow.css";
+
 const Write = () => {
   return (
     <div className="add">
@@ -28,12 +32,12 @@ const Write = () => {
             </div>
           </div>
           <div className="editorContainer">
-            {/* <ReactQuill
+            <ReactQuill
               className="editor"
               theme="snow"
-              value={value}
-              onChange={setValue}
-            /> */}
+              // value={value}
+              // onChange={setValue}
+            />
           </div>
         </div>
       </div>
