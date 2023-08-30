@@ -138,9 +138,54 @@
         font-size: 20px;
       }
 
-      .file{
-        text-decoration: underline;
-        cursor: pointer;
+      .actionFile{
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        
+        .selectFile{
+          cursor: pointer;
+          display: flex;
+          justify-content: space-between;
+          background-color: rgb(255, 217, 128);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-weight: 500;
+          font-size: 14px;
+          border: 1px solid white;
+          color: black;
+          padding: 12px;
+          height: 10px;
+  
+          &:hover {
+            color: black;
+            background-color: white;
+            border: 1px solid rgb(255, 217, 128);
+          }
+        }
+
+        .uploadFile{
+          cursor: pointer;
+          display: flex;
+          justify-content: space-between;
+          background-color: rgb(255, 217, 128);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-weight: 500;
+          font-size: 14px;
+          border: 1px solid white;
+          color: black;
+          padding: 12px;
+          height: 10px;
+  
+          &:hover {
+            color: black;
+            background-color: white;
+            border: 1px solid rgb(255, 217, 128);
+          }
+        }
       }
 
       .buttons{

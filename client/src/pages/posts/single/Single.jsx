@@ -63,8 +63,8 @@ const Single = () => {
         {/* <img src={`../upload/${post?.img}`} alt="" /> */}
         <img src={post.img} alt="" />
         <div className="user">
-          {post.userImg && <img
-            src={post.userImg}
+          {post.profilePic && <img
+            src={post.profilePic}
             alt=""
           />}
           {/* <img

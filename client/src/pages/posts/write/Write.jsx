@@ -14,36 +14,47 @@ import { useLocation, useNavigate } from "react-router-dom";
 const Write = () => {
 
   const state = useLocation().state;
-  const [value, setValue] = useState(state?.title || "");
-  const [title, setTitle] = useState(state?.desc || "");
+  const [value, setValue] = useState( "");
+  const [title, setTitle] = useState( "");
   const [file, setFile] = useState(null);
-  const [cat, setCat] = useState(state?.cat || "");
-  const [tags, setTags] = useState(state?.tags || "");
+  const [cat, setCat] = useState("");
+  const [tags, setTags] = useState("");
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+
+  // const upload = async () => {
+  //   try {
+  //     const formData = new FormData();
+  //     formData.append("file", file);
+  //     const res = await axios.post("http://localhost:8800/api/upload", formData);
+  //     return res.data;
+  //   } catch (err) {
+  //     console.log(err);
+  //   }
+  // };
 
   const handleClick = async (e) => {
     e.preventDefault();
-    const imgUrl = await upload();
+    // const imgUrl = await upload();
 
-    try {
-      state
-        ? await axios.put(`/posts/${state.id}`, {
-            title,
-            desc: value,
-            cat,
-            img: file ? imgUrl : "",
-          })
-        : await axios.post(`/posts/`, {
-            title,
-            desc: value,
-            cat,
-            img: file ? imgUrl : "",
-          });
-          navigate("/")
-    } catch (err) {
-      console.log(err);
-    }
+    // try {
+    //   state
+    //     ? await axios.put(`http://localhost:8800/api/posts/${state.id}`, {
+    //         title,
+    //         desc: value,
+    //         cat,
+    //         img: file ? imgUrl : "",
+    //       })
+    //     : await axios.post(`http://localhost:8800/api/posts/`, {
+    //         title,
+    //         desc: value,
+    //         cat,
+    //         img: file ? imgUrl : "",
+    //       });
+    //       navigate("/")
+    // } catch (err) {
+    //   console.log(err);
+    // }
   };
 
   return (
