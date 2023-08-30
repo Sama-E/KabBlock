@@ -48,10 +48,23 @@
           font-weight: 400;
         }
 
-        p {
-          font-size: 16px;
-          font-weight: 400;
-        }
+          .desc  {
+            height: unset;
+            opacity: 1;
+            position: relative;
+            max-height: 200px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: normal;
+            display: -webkit-box;
+            -webkit-line-clamp: 6;
+            -webkit-box-orient: vertical;
+  
+            p {
+              font-size: 16px;
+              font-weight: 400;
+            }
+          }
 
         button {
           width: max-content;

@@ -62,8 +62,12 @@ const Home = () => {
             <Link className="link" to={`/post/${post.id}`}>
               <h1>{post.title}</h1>
             </Link>
-            {/* <p>{getText(post.desc)}</p> */}
-            <p>{post.desc}</p>
+            <div className="descContainer">
+              <div className="desc">
+                {/* <p>{getText(post.desc)}</p> */}
+                <p>{post.desc}</p>
+              </div>
+            </div>
             <button>Read More</button>
           </div>
         </div>
