@@ -60,8 +60,8 @@ const Single = () => {
   return (
     <div className="single">
       <div className="content">
-        {/* <img src={`../upload/${post?.img}`} alt="" /> */}
-        <img src={post.img} alt="" />
+        <img src={`../uploads/${post?.img}`} alt="" />
+        {/* <img src={post.img} alt="" /> */}
         <div className="user">
           {post.profilePic && <img
             src={post.profilePic}
@@ -78,8 +78,8 @@ const Single = () => {
           </div>
           {currentUser?.id === post.userId && (
             <div className="edit">
-              {/* <Link to={`/write?edit=2`} state={post}> */}
-              <Link to={`/write?edit=2`}>
+              <Link to={`/write?edit=2`} state={post}>
+              {/* <Link to={`/write?edit=2`}> */}
                 <img src={Edit} alt="" />
               </Link>
               <img onClick={handleDelete} src={Delete} alt="" />

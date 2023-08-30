@@ -1,5 +1,8 @@
+import React, { useState } from "react";
 
-const Tags = () => {
+const Tags = (tags) => {
+  const [tag, setTag] = useState("");
+
   return (
     <div className="item">
       <h3>
@@ -7,10 +10,11 @@ const Tags = () => {
       </h3>
       <div className="tags">
         <input
-            type="text"
-            placeholder="Tags"
-            // onChange={(e) => setTags(e.target.value)}
-          />
+          type="text"
+          placeholder="Tags"
+          value={tags.tags}
+          onChange={(e) => setTag(e.target.value)}
+        />
       </div>
     </div>
   )
