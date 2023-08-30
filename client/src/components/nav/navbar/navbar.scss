@@ -36,6 +36,10 @@
         cursor: pointer;
       }
 
+      .userName{
+        font-size: 20px;
+      }
+
       .write {
         background-color: $lightGreen;
         width: 50px;
@@ -51,6 +55,24 @@
           color: black;
           background-color: white;
           border: 1px solid $lightGreen;
+        }
+      }
+      .logout {
+        background-color: rgb(255, 159, 159);
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 300;
+        border: 1px solid white;
+        font-size: 14px;
+
+        &:hover {
+          color: black;
+          background-color: white;
+          border: 1px solid rgb(255, 159, 159);
         }
       }
     }
