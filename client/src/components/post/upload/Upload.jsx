@@ -23,20 +23,20 @@ const Upload = () => {
       const res = await axios.post("http://localhost:8800/api/upload", formData)
       console.log(res.data);
     } catch (err) {
-      console.log(err);
+      return res.data;
     }
   };
 
   const handleClick = async (e) => {
     e.preventDefault();
-    upload();
+    const imgUrl = upload();
   }
 
 
   return (
     <div className="item">
       <h3>
-        <b>Jumbo Upload Image:</b>
+        <b>Jumbotron Image Upload:</b>
       </h3>
       <div className="actionFile">
         <label className="selectFile" htmlFor="file">
