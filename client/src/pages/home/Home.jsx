@@ -7,6 +7,7 @@ import axios from "axios";
 const Home = () => {
 
   const [posts, setPosts] = useState([]);
+  const [category, setCategory] = useState("");
 
   const cat = useLocation().search;
 
@@ -15,6 +16,13 @@ const Home = () => {
       try {
         const res = await axios.get(`http://localhost:8800/api/posts${cat}`);
         setPosts(res.data);
+        var category = cat.slice(5);
+        setCategory(category)
+        if (category === "RealEstate") {
+          // let real_estate = category.substring(0,4) + " " + category.substring(4);
+          // Substring changes the data type
+          setCategory("Real Estate");
+        }
       } catch (err) {
         console.log(err);
       }
@@ -51,6 +59,9 @@ const Home = () => {
 
   return (
     <div className="home">
+      <div className="category">
+        {category}
+      </div>
     <div className="posts">
       {posts.map((post) => (
         <div className="post" key={post.id}>

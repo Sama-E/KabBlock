@@ -83,7 +83,6 @@ const Single = () => {
                 <img src={Edit} alt="" />
               </Link>
               <img onClick={handleDelete} src={Delete} alt="" />
-              <img src={Delete} alt="" />
             </div>
           )}
         </div>

@@ -11,7 +11,7 @@ const Categories = () => {
           name="cat"
           value="realestate"
           id="realestate"
-          onChange={(e) => setCat(e.target.value)}
+          // onChange={(e) => setCat(e.target.value)}
         />
         <label htmlFor="realestate">Real Estate</label>
       </div>

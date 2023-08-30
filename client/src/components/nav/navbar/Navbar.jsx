@@ -15,22 +15,22 @@ const Navbar = () => {
         </Link>
       </div>
       <div className="links">
-        <Link className="link" to="/?cat=realestate">
+        <Link className="link" to="/?cat=RealEstate">
           <h6>REAL ESTATE</h6>
         </Link>
-        <Link className="link" to="/?cat=economics">
+        <Link className="link" to="/?cat=Economics">
           <h6>ECONOMICS</h6>
         </Link>
-        <Link className="link" to="/?cat=technology">
+        <Link className="link" to="/?cat=Technology">
           <h6>TECHNOLOGY</h6>
         </Link>
-        <Link className="link" to="/?cat=culture">
+        <Link className="link" to="/?cat=Culture">
           <h6>CULTURE</h6>
         </Link>
-        <Link className="link" to="/?cat=design">
+        <Link className="link" to="/?cat=Design">
           <h6>DESIGN</h6>
         </Link>
-        <Link className="link" to="/?cat=food">
+        <Link className="link" to="/?cat=Food">
           <h6>FOOD</h6>
         </Link>
         
