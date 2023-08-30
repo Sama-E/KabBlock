@@ -8,15 +8,15 @@ const Login = () => {
       <h1>Login</h1>
         <input
           required
-          type="text"
-          placeholder="username"
-          name="username"
+          type="email"
+          placeholder="Email"
+          name="email"
           // onChange={handleChange}
         />
         <input
           required
           type="password"
-          placeholder="password"
+          placeholder="Password"
           name="password"
           // onChange={handleChange}
         />
