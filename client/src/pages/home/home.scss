@@ -1,6 +1,17 @@
 @import  "/src/app.scss";
 
 .home {
+  .category{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    h1{
+      font-size: 32px;
+      font-weight: 400;
+    }
+  }
   .posts {
     margin-top: 50px;
     display: flex;
@@ -44,7 +55,7 @@
         justify-content: space-between;
 
         h1 {
-          font-size: 32px;
+          font-size: 28px;
           font-weight: 400;
         }
 
@@ -56,9 +67,11 @@
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: normal;
+            margin-bottom: 20px;
             display: -webkit-box;
             -webkit-line-clamp: 6;
             -webkit-box-orient: vertical;
+
   
             p {
               font-size: 16px;

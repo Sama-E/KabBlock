@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import axios from "axios";
+import DOMPurify from "dompurify";
 
 const Home = () => {
 
@@ -29,6 +30,11 @@ const Home = () => {
     };
     fetchData();
   }, [cat]);
+
+  const getText = (html) =>{
+    const doc = new DOMParser().parseFromString(html, "text/html")
+    return doc.body.textContent
+  }
 
   //   const posts = [
   //   {
@@ -60,7 +66,7 @@ const Home = () => {
   return (
     <div className="home">
       <div className="category">
-        {category}
+        <h1>{category}</h1>
       </div>
     <div className="posts">
       {posts.map((post) => (
@@ -75,8 +81,8 @@ const Home = () => {
             </Link>
             <div className="descContainer">
               <div className="desc">
-                {/* <p>{getText(post.desc)}</p> */}
-                <p>{post.desc}</p>
+                <p>{getText(post.desc)}</p>
+                {/* <p>{post.desc}</p> */}
               </div>
             </div>
             <button>Read More</button>
