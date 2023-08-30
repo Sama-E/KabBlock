@@ -17,7 +17,7 @@ export const getPosts = (req, res) => {
 //GET BLOG POST
 export const getPost = (req, res) => {
   const q =
-    "SELECT p.id, `firstName`, `lastName`, `email`, `profilePic`, `title`, `desc`, p.img, `cat`, `tags`, p.created_at FROM users u JOIN posts p ON u.id = p.userId WHERE p.id = ? ";
+    "SELECT p.id, u.id, `firstName`, `lastName`, `userId`, `profilePic`, `title`, `desc`, p.img, `cat`, `tags`, p.created_at FROM users u JOIN posts p ON u.id = p.userId WHERE p.id = ? ";
 
   db.query(q, [req.params.id], (err, data) => {
     if (err) return res.status(500).json(err);
@@ -62,7 +62,7 @@ export const deletePost = (req, res) => {
     if (err) return res.status(403).json("Token is not valid!");
 
     const postId = req.params.id;
-    const q = "DELETE FROM posts WHERE `id` = ? AND `uid` = ?";
+    const q = "DELETE FROM posts WHERE `id` = ? AND `userId` = ?";
 
     db.query(q, [postId, userInfo.id], (err, data) => {
       if (err) return res.status(403).json("You can delete only your post!");

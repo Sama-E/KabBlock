@@ -76,7 +76,7 @@ const Single = () => {
             <p>Posted {moment(post.created_at).fromNow()}</p>
             {/* <p>Posted {post.date}</p> */}
           </div>
-          {currentUser.email === post.email && (
+          {currentUser.id === post.userId && (
             <div className="edit">
               {/* <Link to={`/write?edit=2`} state={post}> */}
               <Link to={`/write?edit=2`}>

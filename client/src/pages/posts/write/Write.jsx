@@ -20,6 +20,32 @@ const Write = () => {
   const [cat, setCat] = useState(state?.cat || "");
   const [tags, setTags] = useState(state?.tags || "");
 
+  const navigate = useNavigate()
+
+  const handleClick = async (e) => {
+    e.preventDefault();
+    const imgUrl = await upload();
+
+    try {
+      state
+        ? await axios.put(`/posts/${state.id}`, {
+            title,
+            desc: value,
+            cat,
+            img: file ? imgUrl : "",
+          })
+        : await axios.post(`/posts/`, {
+            title,
+            desc: value,
+            cat,
+            img: file ? imgUrl : "",
+          });
+          navigate("/")
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
   return (
     <div className="add">
       <div className="content">
@@ -34,12 +60,6 @@ const Write = () => {
         <div className="edit">
           <div className="editItem">
             <h4>Post</h4>
-            <div className="buttonEdit">
-              Add Heading
-            </div>
-            <div className="buttonEdit">
-              Add Box Image
-            </div>
           </div>
           <div className="editorContainer">
             <ReactQuill

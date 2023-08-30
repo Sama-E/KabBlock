@@ -8,6 +8,9 @@ export const AuthContextProvider = ({ children }) => {
     JSON.parse(localStorage.getItem("user")) || null
   );
 
+  //Default accepts cookie in storage with credentials
+  axios.defaults.withCredentials = true;
+
   const login = async (inputs) => {
     const res = await axios.post("http://localhost:8800/api/auth/login", inputs);
     setCurrentUser(res.data);
