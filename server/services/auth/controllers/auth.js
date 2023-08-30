@@ -1,6 +1,9 @@
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 import {db} from "./../../../db.js";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 //REGISTER
 export const register = (req, res) => {
@@ -45,7 +48,7 @@ export const login = (req, res) => {
       return res.status(400).json("Wrong email or password!");
 
     //Send userInfo + jwt
-    const token = jwt.sign({ id: data[0].id }, "jwtkey");
+    const token = jwt.sign({ id: data[0].id }, process.env.JWT_KEY);
     const { password, ...other } = data[0];
 
     res.cookie("access_token", token, {
