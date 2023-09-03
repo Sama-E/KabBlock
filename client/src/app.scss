@@ -1,5 +1,16 @@
 $lightGreen: #8fbbe8;
 
+@mixin mobile {
+  @media (max-width: 480px) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (max-width: 960px) {
+    @content;
+  }
+}
+
 .app {
   display: flex;
   justify-content: center;

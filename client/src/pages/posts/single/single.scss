@@ -8,7 +8,7 @@
     flex: 5;
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 20px;
 
     img {
       width: 100%;
@@ -49,6 +49,28 @@
       font-size: 42px;
       color: #333;
     }
+      
+    h3 {
+      font-size: 18px;
+    }
+    
+    button {
+      width: max-content;
+      padding: 7px 15px;
+      border: none;
+      cursor: pointer;
+      background-color: rgb(237, 221, 252);
+      border: 1px solid rgb(66, 37, 95);
+      color: rgb(66, 37, 95);
+      font-size: 16px;
+    
+      &:hover {
+        border: 1px solid rgb(66, 37, 95);
+        background-color: white;
+        color: rgb(66, 37, 95);
+      }
+    }
+
 
     p {
       text-align: justify;

@@ -13,16 +13,6 @@ import DOMPurify from "dompurify";
 
 const Single = () => {
 
-  // const post = [
-  //   {
-  //     title: "Lorem ipsum dolor sit amet consectetur adipisicing elit",
-  //     desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. A possimus excepturi aliquid nihil cumque ipsam facere aperiam at! Ea dolorem ratione sit debitis deserunt repellendus numquam ab vel perspiciatis corporis!",
-  //     img: "https://images.pexels.com/photos/7008010/pexels-photo-7008010.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  //     userImg: "https://images.pexels.com/photos/7008010/pexels-photo-7008010.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  //     username: "Kaizen Kab"
-  //   },
-  // ]
-
   const [post, setPost] = useState({});
 
   const location = useLocation();
@@ -68,10 +58,6 @@ const Single = () => {
             src={post.profilePic}
             alt=""
           />}
-          {/* <img
-            src={post.userImg}
-            alt=""
-          /> */}
           <div className="info">
             <span>{post.firstName} {post.lastName}</span>
             <p>Posted {moment(post.created_at).fromNow()}</p>
@@ -87,7 +73,10 @@ const Single = () => {
             </div>
           )}
         </div>
-        <h1>{post.title}</h1>
+          <h1>{post.title}</h1>
+        <div className="heading">
+          <h3>Category: </h3><button>{post.cat}</button>
+        </div>
         <p
           dangerouslySetInnerHTML={{
             __html: DOMPurify.sanitize(post.desc),

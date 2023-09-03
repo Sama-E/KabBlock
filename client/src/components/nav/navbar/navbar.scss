@@ -3,11 +3,12 @@
 .navbar {
   .container {
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: space-between;
 
     .logo {
-      
+      display: flex;
       img {
         width: 120px;
       }
@@ -17,10 +18,15 @@
         font-weight: 500;
       }
     }
+
     .links {
       display: flex;
-      align-items: center;
+      align-items: right;
       gap: 10px;
+
+      @include mobile {
+        display: none;
+      } 
 
       h6 {
         font-size: 18px;
@@ -35,46 +41,87 @@
       span {
         cursor: pointer;
       }
+    }
+
+    .rightSide{
+      display: flex;
+      align-items: center;
+      gap: 10px;
 
       .userName{
         font-size: 20px;
       }
 
-      .write {
-        background-color: $lightGreen;
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: 400;
-        border: 1px solid white;
-        color: white;
+      .mobile{
+        display: none;
 
-        &:hover {
-          color: black;
+        @include mobile {
+          display: flex;
+        }
+
+        .links{
+          position: absolute;
+          top: 100px;
+          right: -300px;
+          padding: 0 20px;
           background-color: white;
-          border: 1px solid $lightGreen;
+          border-radius: 10px;
+          z-index: 999;
+          border: 1px solid lightgrey;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          width: 130px;
+          font-weight: 300;
+          color: black;
         }
       }
-      .logout {
-        background-color: rgb(255, 159, 159);
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: 500;
-        border: 1px solid white;
-        font-size: 14px;
-        color: white;
 
-        &:hover {
-          color: black;
-          background-color: white;
-          border: 1px solid rgb(255, 159, 159);
+      .right{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        padding-right: 20px;
+
+        .write {
+          background-color: $lightGreen;
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-weight: 400;
+          border: 1px solid white;
+          color: white;
+  
+          &:hover {
+            color: black;
+            background-color: white;
+            border: 1px solid $lightGreen;
+          }
+        }
+
+        .logout {
+          background-color: rgb(255, 159, 159);
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-weight: 500;
+          border: 1px solid white;
+          font-size: 14px;
+          color: white;
+  
+          &:hover {
+            color: black;
+            background-color: white;
+            border: 1px solid rgb(255, 159, 159);
+          }
         }
       }
     }
